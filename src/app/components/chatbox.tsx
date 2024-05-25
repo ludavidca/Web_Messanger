@@ -1,6 +1,7 @@
 'use client';
 
 import React, {useState} from 'react';
+import axios from 'axios';
 
 export default function Chatbox() {
         const [inputValue, setInputValue] = useState("");
@@ -8,9 +9,14 @@ export default function Chatbox() {
         const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>) => {
             setInputValue(event.target.value);
         }
+
+        const handleSubmit = async (event:React.FormEvent<HTMLFormElement>) => {
+            event.preventDefault();;
+
+        };
         return (
         <div className="flex flex-row bottom-0 p-6 absolute text-l border border-black rounded-2xl w-[100%]">
-            <form action="/api/chat" method="post" className="flex text-ellipsis w-full">
+            <form onSubmit={handleSubmit} method="post" className="flex text-ellipsis w-full">
                 <input
                     type="String"
                     value={inputValue}
