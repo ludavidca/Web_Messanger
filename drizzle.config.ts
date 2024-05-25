@@ -1,13 +1,10 @@
+import { type Config } from "drizzle-kit";
+import { env } from "~/env"
 
-import { env } from "~/env";
-
-import { defineConfig } from "drizzle-kit";
-
-export default defineConfig({
-  dialect: "postgresql", 
-  schema: "./src/schema/*",
-  out: "./drizzle",
-  dbCredentials: {
-    url: env.POSTGRES_URL,
-  }
-});
+export default {
+    dialect: "postgresql", // "postgresql" | "mysql"
+    schema: "./src/server/db/schema.ts",
+    dbCredentials: {
+        url: env.POSTGRES_URL,
+    }
+} satisfies Config;

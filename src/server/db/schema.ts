@@ -35,8 +35,8 @@ export const messages = createTable(
   {
     id: serial("id").primaryKey().notNull(),
     content: varchar("content", { length: 1024 }).notNull(), 
-    sentFrom: varchar("sent_from", { length: 256 }).notNull(), 
-    sentTo: varchar("sent_to", { length: 256 }).notNull(), 
+    userId: varchar("user_id", { length: 256 }).notNull(), 
+    sentId: varchar("sent_to", { length: 256 }).notNull(), 
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
