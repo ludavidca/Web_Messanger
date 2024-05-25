@@ -8,7 +8,7 @@ import Chatbox from "./components/chatbox";
 const socket = io("http://localhost:3000");
 
 
-export function ChatRoom() {
+function ChatRoom() {
   return (
     <div className="flex-col">
   
