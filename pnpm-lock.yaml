@@ -27,7 +27,7 @@ dependencies:
     specifier: ^0.27.3
     version: 0.27.3
   next:
-    specifier: ^14.2.1
+    specifier: ^14.2.3
     version: 14.2.3(react-dom@18.2.0)(react@18.2.0)
   postgres:
     specifier: ^3.4.3
