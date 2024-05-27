@@ -35,12 +35,11 @@ export const messages = createTable(
   {
     id: serial("id").primaryKey().notNull(),
     content: varchar("content", { length: 1024 }).notNull(), 
-    userId: varchar("user_id", { length: 256 }).notNull(), 
-    sentId: varchar("sent_to", { length: 256 }).notNull(), 
+    user_id: varchar("user_id", { length: 256 }).notNull(), 
+    sent_to: varchar("sent_to", { length: 256 }).notNull(), 
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
-    updatedAt: timestamp("updated_at")
-      .default(sql`CURRENT_TIMESTAMP`),
+    isimage: varchar("isimage", { length: 256 }).notNull(),
   }
 );

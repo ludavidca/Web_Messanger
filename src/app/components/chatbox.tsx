@@ -14,11 +14,9 @@ export default function Chatbox() {
 
         const handleSubmit = async (inputValue:string) => {
             console.log(inputValue);
-            await db.insert(messages)
-                .values({ content: inputValue, sentId: "1", userId:"2" })
         };
         return (
-        <div className="flex flex-row bottom-0 p-6 absolute text-l border border-black rounded-2xl w-[100%]">
+        <div className="fixed bg-gray-100 flex flex-row bottom-0 p-6 text-l border border-black rounded-2xl w-[100%]">
             <form className="flex text-ellipsis w-full">
                 <input
                     type="String"
